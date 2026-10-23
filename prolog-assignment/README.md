@@ -4,12 +4,12 @@ A Sri Lankan campus printing-shop assignment built entirely in SWI-Prolog. It as
 
 ## Run on this Mac
 
-Use **`/opt/homebrew/bin/swipl` — SWI-Prolog 10.0.2, arm64-darwin**. The initial `which -a swipl` and `swipl --version` checks found no executable, and neither common Homebrew location nor `/Applications` contained SWI-Prolog. Homebrew was installed, so SWI-Prolog was installed there. This explicit path avoids ambiguity with a future DMG installation. Homebrew reported certificate/OpenSSL post-install warnings; the installed Prolog executable, tests and local HTTP server worked successfully.
+Tested with **SWI-Prolog 10.0.2 on macOS (Apple Silicon)**. The Homebrew executable is `/opt/homebrew/bin/swipl`. Use `which -a swipl` and `swipl --version` to check the active installation.
 
 In Terminal:
 
 ```sh
-cd "/Users/sithumuthsara/On My Mac Documents/Development/Assigment  - Logic Programming and Deductive Reasoning/prolog-assignment"
+cd campus-print-shop-advisor/prolog-assignment
 /opt/homebrew/bin/swipl -q -s main.pl
 ```
 
@@ -85,11 +85,11 @@ For a repeatable classroom demonstration, before starting the interfaces use:
 set_demo_time('2026-10-23 09:00').
 ```
 
-This freezes the clock and the interface explicitly labels it **Frozen demo clock**. Use it only with disposable demonstration data. `use_live_time.` returns to the real clock; restarting also restores live time. The live clock rounds up to the next whole minute. See the updated demo guide for exact inputs.
+This freezes the clock and the interface explicitly labels it **Frozen demo clock**. Use it only with disposable demonstration data. `use_live_time.` returns to the real clock; restarting also restores live time. The live clock rounds up to the next whole minute.
 
 ## Files and line budget
 
-The core is **256 physical lines including comments**, across `main.pl`, `knowledge_base.pl`, `engine.pl`, `records.pl` and `scheduling.pl`. The two interfaces, tests and verification helpers are separate from the core, as agreed.
+The core is **256 physical lines including comments**, across `main.pl`, `knowledge_base.pl`, `engine.pl`, `records.pl` and `scheduling.pl`. The two interfaces, tests and verification helpers are separate from the core.
 
 | File | Purpose |
 |---|---|
@@ -102,7 +102,6 @@ The core is **256 physical lines including comments**, across `main.pl`, `knowle
 | `ui_web.pl` | Local HTTP pages, session isolation and forms |
 | `data/db.pl` | Current stock, orders, reserved schedules and next order number |
 | `tests.pl` | 47 plunit tests |
-| `DEMO_GUIDE.md` | Walkthrough, concept map and viva preparation |
 | `sample_runs.txt` | Actual captured console sessions with input lists |
 | `verification/` | Reproducible checks and results |
 
@@ -137,5 +136,3 @@ This clears orders and restores 80 sheets, 30 staple sets and 10 spiral units. R
 - Port 8080 busy: stop the existing demo with `stop_web.` or exit its Terminal process. Do not start a second instance.
 - After editing code: use `make.` at the Prolog prompt. To reload changed startup state reliably, restart after saving data.
 - Browser shows a stale-question or unavailable-option message: start a new consultation. Browser tabs in the same browser profile share a session; separate browsers have separate consultations.
-
-The four-slide presentation is in `presentation/`. It summarizes the problem, shared Prolog logic, deadline example and concepts.
