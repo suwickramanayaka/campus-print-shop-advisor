@@ -1,0 +1,787 @@
+=== all_menus_and_invalid_inputs ===
+INPUTS (one per line):
+oops
+2
+4
+6
+1
+2
+paper.
+2
+unknown.
+9
+0
+3
+oops
+1
+ink
+3
+1
+paper
+-1
+1
+paper
+20
+2
+paper
+80
+3
+staple
+1
+staple
+30
+0
+1
+abc
+0
+40
+3
+maybe
+no
+yes
+yes
+spiral
+1020
+none
+99
+1
+maybe
+yes
+2
+4
+6
+1
+0
+5
+999
+5
+1
+2
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Choose 0 to 6.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+Material                Available
+paper                   80
+staple                  30
+spiral                  10
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: No orders yet.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: findall material occurrences: []
+setof fails: no orders.
+bagof fails: no orders; findall returned [].
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: Enter a material atom WITH a full stop, e.g. paper. then Enter: Supported material.
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: Enter a material atom WITH a full stop, e.g. paper. then Enter: Unknown material.
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: Choose 0 to 2.
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Choose 0 to 3.
+
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: Could not complete: error(invalid_stock,_8088)
+
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: Could not complete: error(invalid_stock,_8314)
+
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Invalid answer; please try again.
+Pages per copy (1-1000): Invalid answer; please try again.
+Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Invalid answer; please try again.
+Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Options meet your requirements, budget, stock and deadline.
+1 option(s), cheapest first:
+1. bw, double-sided, binding: spiral; materials [paper-60,spiral-3]; total LKR 1020.
+   17 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:17 (Sri Lanka).
+Option number (0 to go back): Invalid option.
+Option number (0 to go back): Confirm order? (yes/no): Enter yes or no.
+Confirm order? (yes/no): Order 1 confirmed; stock updated.
+Start 2026-10-23 09:00; finish 2026-10-23 09:17; deadline none (Sri Lanka).
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+Material                Available
+staple                  30
+paper                   20
+spiral                  7
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: #1  bw, double-sided, binding: spiral; materials [paper-60,spiral-3]; total LKR 1020.
+    Start 2026-10-23 09:00; finish 2026-10-23 09:17; deadline none (Sri Lanka).
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: findall material occurrences: [paper,spiral]
+setof unique materials: [paper,spiral]
+bagof group spiral: [1]
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Order number: Could not complete: error(unknown_order,_9612)
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Order number: Cancelled; materials returned.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+Material                Available
+staple                  30
+paper                   80
+spiral                  10
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== budget_rejection ===
+INPUTS (one per line):
+1
+40
+3
+no
+yes
+yes
+spiral
+1000
+none
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Available options exceed your budget.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== capacity_rejection ===
+INPUTS (one per line):
+1
+1000
+1
+no
+no
+yes
+staple
+99999
+none
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Binding capacity is insufficient.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== colour_and_optional_binding ===
+INPUTS (one per line):
+3
+2
+paper
+100
+0
+1
+5
+2
+yes
+yes
+no
+1000
+none
+1
+no
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Options meet your requirements, budget, stock and deadline.
+2 option(s), cheapest first:
+1. colour, double-sided, binding: none; materials [paper-6]; total LKR 212.
+   3 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:03 (Sri Lanka).
+2. colour, single-sided, binding: none; materials [paper-10]; total LKR 220.
+   3 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:03 (Sri Lanka).
+Option number (0 to go back): Confirm order? (yes/no): 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== either_binding_and_back ===
+INPUTS (one per line):
+1
+4
+1
+no
+no
+yes
+either
+1000
+none
+0
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Options meet your requirements, budget, stock and deadline.
+4 option(s), cheapest first:
+1. bw, single-sided, binding: staple; materials [paper-4,staple-1]; total LKR 33.
+   4 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:04 (Sri Lanka).
+2. colour, single-sided, binding: staple; materials [paper-4,staple-1]; total LKR 93.
+   4 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:04 (Sri Lanka).
+3. bw, single-sided, binding: spiral; materials [paper-4,spiral-1]; total LKR 128.
+   6 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:06 (Sri Lanka).
+4. colour, single-sided, binding: spiral; materials [paper-4,spiral-1]; total LKR 188.
+   6 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:06 (Sri Lanka).
+Option number (0 to go back): 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== unknown_cancel_and_nonnumeric ===
+INPUTS (one per line):
+5
+abc
+3
+2
+paper
+abc
+0
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Order number: Could not complete: error(unknown_order,_7042)
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: Could not complete: error(invalid_stock,_7362)
+
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== malformed_term ===
+INPUTS (one per line):
+6
+2
+bad(.
+0
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: Enter a material atom WITH a full stop, e.g. paper. then Enter: Could not complete: error(syntax_error(end_of_clause),stream(user_input,18,68,525))
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: Choose 0 to 2.
+
+REPORTS: 1 Aggregation | 2 Prolog term membership | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== deadline_rejection ===
+INPUTS (one per line):
+1
+40
+3
+no
+yes
+yes
+spiral
+1020
+tomorrow
+2026-10-23 08:00
+2026-10-23 09:16
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: Invalid answer; please try again.
+Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: Invalid answer; please try again.
+Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Deadline cannot be met. Earliest completion: 2026-10-23 09:17 Sri Lanka time. Start a new consultation to choose a later deadline.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== deadline_accept_and_queue ===
+INPUTS (one per line):
+1
+40
+3
+no
+yes
+yes
+spiral
+1020
+2026-10-23 09:17
+1
+yes
+3
+1
+paper
+60
+0
+1
+40
+3
+no
+yes
+yes
+spiral
+1020
+2026-10-23 09:20
+4
+0
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Options meet your requirements, budget, stock and deadline.
+1 option(s), cheapest first:
+1. bw, double-sided, binding: spiral; materials [paper-60,spiral-3]; total LKR 1020.
+   17 working minutes. Start 2026-10-23 09:00; finish 2026-10-23 09:17 (Sri Lanka).
+Option number (0 to go back): Confirm order? (yes/no): Order 1 confirmed; stock updated.
+Start 2026-10-23 09:00; finish 2026-10-23 09:17; deadline 2026-10-23 09:17 (Sri Lanka).
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: Material (paper/staple/spiral): Quantity: 
+STOCK: 1 Add | 2 Set quantity | 3 Remove record | 0 Back
+Choice: 
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Copies (1-100): Is colour required? (yes/no): Is double-sided acceptable? (yes/no): Is binding required? (yes/no): Required binding (staple/spiral/either): Budget in whole LKR (0-10000000): Deadline YYYY-MM-DD HH:MM in Sri Lanka, or none: 
+Deadline cannot be met. Earliest completion: 2026-10-23 09:34 Sri Lanka time. Start a new consultation to choose a later deadline.
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: #1  bw, double-sided, binding: spiral; materials [paper-60,spiral-3]; total LKR 1020.
+    Start 2026-10-23 09:00; finish 2026-10-23 09:17; deadline 2026-10-23 09:17 (Sri Lanka).
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Goodbye.
+
+
+=== end_of_input ===
+INPUTS (one per line):
+1
+
+CAPTURED OUTPUT:
+Frozen demo clock: 2026-10-23 09:00 Sri Lanka. Hours 09:00-17:00 daily.
+
+Welcome to Campus Print Shop Advisor — sample prices
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: Pages per copy (1-1000): Could not complete: error(input_closed,_7068)
+
++--------------------------------------+
+|       CAMPUS PRINT SHOP ADVISOR       |
++--------------------------------------+
+1. New consultation / quotation
+2. View stock
+3. Manage stock
+4. View orders
+5. Cancel order
+6. Reports / concept demo
+0. Exit
+Choice: 

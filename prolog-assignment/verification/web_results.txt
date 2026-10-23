@@ -1,0 +1,20 @@
+PASS invalid answer retained question
+PASS separate browser sessions do not share answers
+PASS expected quote appears
+PASS unavailable quote cannot be confirmed
+PASS order confirmation succeeds
+PASS paper and binding stock deducted
+PASS duplicate confirmation rejected
+PASS cancellation restores stock
+PASS duplicate cancellation rejected
+PASS unknown stock material rejected
+PASS nonnumeric stock rejected
+PASS stock removal succeeds
+PASS stock addition succeeds
+PASS invalid form token rejected
+PASS binding question skipped when unnecessary
+PASS invalid deadline date rejected
+PASS earliest completion shown for missed deadline
+PASS duration and finish shown in quote
+PASS confirmed schedule and deadline displayed
+PASS another session sees queue delay

@@ -1,0 +1,113 @@
+# Task: Build a Prolog Assignment — Real-World, Sri Lankan-Themed System
+
+## Context
+I'm doing an MSc assignment in logic programming. I've never used Prolog, so you must design, implement, test and document everything, and prepare me to demo it confidently to my lecturer.
+
+The lecturer wants a **practical, real-world Prolog program**, not isolated snippets. He suggested an inventory control system for a small shop, or a car fault diagnosis system that asks follow-up questions ("Battery is good but it won't start? Did you do a service recently?"). He stressed that **all core concepts must appear in one program**, and that there should be a **user-friendly interface** instead of raw `?-` queries. He also mentioned a UI.
+
+The theme must be **local to Sri Lanka and relatable**.
+
+## Environment
+- macOS. Project folder: `/Users/sithumuthsara/On My Mac Documents/Development/Assigment  - Logic Programming and Deductive Reasoning
+sithumuthsara@Sithums-MacBook-Pro Assigment  - Logic Programming and Deductive Reasoning %`
+- SWI-Prolog is installed twice (the .dmg from swi-prolog.org and Homebrew). First run `which -a swipl` and `swipl --version`, pick one, and tell me which one to use and why.
+- Work and test directly in the project folder. Every file must load and run with no errors or warnings.
+
+---
+
+## Phase 1: Brainstorm the idea with me (do NOT write code yet)
+
+This is a conversation. We work on ideas together until we both agree on one. Only then move to Phase 2.
+
+### How to run the brainstorm
+1. **Open with 6–8 distinct ideas.** For each one give:
+   - Name and a one-line pitch
+   - The Sri Lankan angle (why it's local and relatable)
+   - How it naturally uses the mandatory concepts (expert-system questioning, dynamic DB, lists, aggregation, cut/fail, I/O)
+   - What the demo "wow moment" would be
+   - Complexity (Low / Medium / High) and the main risk
+2. **Mix the idea types**, for example:
+   - Expert systems (diagnosis with follow-up questions)
+   - Inventory, shop and billing systems
+   - Planners and advisors (shopping, crops, travel, scheduling)
+   - Classic AI search puzzles with a local twist (river crossing, water jugs, missionaries & cannibals)
+   - Hybrids (e.g. diagnosis + spare-parts inventory, or a main system + a bonus puzzle module)
+3. **Seed ideas to consider** (improve on these, don't just copy them):
+   - Train trip planner (e.g. Colombo–Kandy–Ella) with routes, classes and fares
+   - Kelani River crossing puzzle: a farmer, a leopard, a goat and gotukola in an oruwa (canoe)
+4. **Give a ranked top 3** with a recommendation, scored against:
+   - How well it fits what the lecturer described (expert system, inventory, questioning)
+   - Coverage of every mandatory concept without forcing it
+   - How relatable and impressive it is in a live demo
+   - Whether it's realistic to build and explain as a Prolog beginner
+5. **Then iterate with me.** Ask me 2–3 focused questions at a time, refine based on my answers, combine or trim ideas, and suggest twists. Don't move on until I explicitly say we've agreed.
+6. **Lock the design.** Once we agree, write a short **Design Spec**: domain and scenario, the main entities and facts, the rule groups, a sample question flow, the menu tree, how each mandatory concept maps to a feature, and the scope (in / out / optional). Ask me to confirm it, then start Phase 2.
+
+---
+
+## Phase 2: Build the agreed system
+
+### Mandatory Prolog concepts
+Each one must be used meaningfully, and the code must have a short comment tag such as `% CONCEPT: findall/3`:
+- Facts and rules (knowledge base)
+- **List manipulation**: head/tail recursion, `append/3`, `sum_list/2`, `sort/2` or `msort/2`, `nth1/3`, plus at least one custom recursive list predicate
+- **Membership**: `member/2`, and also a custom `member`-style predicate to show understanding
+- **Length**: `length/2`
+- **Set aggregation**: `findall/3`, `bagof/3` **and** `setof/3`, with at least one case showing how they differ (e.g. `setof` gives sorted, unique results; `bagof` fails on no solutions where `findall` returns `[]`)
+- **Database manipulation**: `:- dynamic`, `assert/asserta/assertz`, `retract/1`, `retractall/1`
+- **Cut (`!`)**: a green cut for efficiency and a red cut that changes logic
+- **Fail**: the `fail`-driven loop for printing all records, and `\+` (negation as failure)
+- **Input/Output**: `read/1`, `write/1`, `nl/0`, `format/2` for aligned tables
+- Recursion, arithmetic (`is`, comparisons) and `between/3` for input validation
+- Interactive questioning: ask the user for information, store the answers as dynamic facts so no question is asked twice, and clear them on a new session
+- Invalid-input handling (bad menu choices, unknown names, non-numeric values) without crashing
+
+### User interface
+1. **Primary: console menu.** Entry point `start.` shows a clear, boxed main menu with submenus. It loops until Exit, with clean formatting, headers and aligned tables.
+   - `read/1` needs a trailing full stop, which is confusing in a demo. Use `read_term/3` with a clear hint, **or** `read_line_to_string/2` with parsing. Choose and justify.
+2. **Secondary: simple web UI** using SWI-Prolog's built-in HTTP libraries (`thread_httpd`, `http_dispatch`, `html_write`):
+   - Started with `start_web.`, served at `http://localhost:8080`.
+   - Calls the **same** core predicates as the console version, with no duplicated logic.
+   - Do **not** use XPCE (it needs XQuartz on macOS and is fragile).
+
+### Code structure (adapt the names to the agreed domain)
+
+prolog-assignment/
+├── main.pl % loads everything; start/0, start_web/0
+├── knowledge_base.pl % static facts and rules
+├── engine.pl % core logic (diagnosis / planning / search)
+├── records.pl % dynamic DB: add/update/remove, persistence
+├── ui_console.pl % menus, I/O, formatting
+├── ui_web.pl % HTTP server and pages
+├── data/db.pl % persisted dynamic facts (if implemented)
+├── tests.pl % plunit tests
+└── README.md
+
+Keep the code clean and idiomatic. Use comments only for the `% CONCEPT:` tags and for non-obvious logic.
+
+### Testing
+- Write `plunit` tests for the core predicates and run them with `swipl -g run_tests -t halt tests.pl`.
+- Manually run every menu path, including invalid inputs, and capture the sample output.
+- Fix all singleton-variable and discontiguous warnings.
+
+---
+
+## Deliverables
+1. All source files, working.
+2. `README.md` with setup and run instructions for macOS.
+3. `DEMO_GUIDE.md`, my presentation guide:
+   - A 2-minute plain-English explanation of the system for the opening.
+   - A step-by-step demo script (8–10 minutes): exact inputs to type, what to point at, and which concept each step shows.
+   - A concept-to-code map: a table of each concept → file → predicate → line → one-line explanation.
+   - A short "Prolog for beginners" section: facts, rules, unification, backtracking, cut, negation as failure, and dynamic DB, each explained with an example from this project.
+   - 15 likely viva questions with short model answers.
+   - A troubleshooting section (wrong swipl in PATH, forgetting the full stop, port 8080 busy, reloading with `make.`).
+4. `sample_runs.txt` with real captured sessions covering every main feature.
+
+## Working style
+- Phase 1 is a dialogue: keep each message short and structured, and end with clear questions for me.
+- I narrow ideas through successive refinement, so expect to iterate. Suggest, don't decide for me.
+- In Phase 2, proceed without waiting for approval unless something is truly ambiguous.
+- Keep the scope realistic for an MSc assignment. Polished and correct is better than sprawling.
+
+MAKE SURE PROLOGO CODE AROUND CODE LINES 200-300

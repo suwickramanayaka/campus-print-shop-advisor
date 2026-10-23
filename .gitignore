@@ -1,0 +1,11 @@
+.DS_Store
+.presentation-build/
+node_modules/
+__pycache__/
+*.pyc
+*.tmp
+*.zip
+.env
+.env.*
+!.env.example
+prolog-assignment/verification/web-test-db.pl
