@@ -1,6 +1,6 @@
 # Design specification: Campus Print Shop Advisor
 
-A campus print shop collects page count, copies, colour requirement, acceptance of double-sided printing, binding requirement budget and an optional deadline. It enumerates compatible A4 options, prices them, checks stock and returns the cheapest feasible options first. Requirements are never silently relaxed.
+A campus print shop collects page count, copies, colour requirement, acceptance of double-sided printing, binding requirement, budget and an optional deadline. It enumerates compatible A4 options, prices them, checks stock and returns the cheapest feasible options first. Requirements are never silently relaxed.
 
 Facts: rates, materials, sample binding limits and initial stock. Dynamic facts: session answers, material quantities, confirmed orders, production bookings and next order ID. Rule groups: validation, conditional questions, options, sheet arithmetic, material costing, budget/stock feasibility, explanation, confirmation/cancellation and aggregation.
 
@@ -8,6 +8,6 @@ Question flow: pages → copies → colour required → double-sided acceptable 
 
 Console menu: consultation, stock view, stock management (add/set/remove), orders, cancellation, reports (aggregation and term-membership demo), exit. Web UI exposes consultation, stock, orders, cancellation and aggregation through SWI-Prolog HTTP libraries.
 
-Included: A4, whole-LKR sample prices, uniform colour mode, single/double-sided printing, none/staple/spiral binding, persistence, invalid input handling, unit tests. Deadline checking: one FIFO station, daily 09:00–17:00 hours, sample print/binding speeds, stored start/finish times and confirmation-time rechecks. Excluded: actual document processing, payments, printers, tax, actual production monitoring and production authentication.
+Included: A4, whole-LKR sample prices, uniform colour mode, single/double-sided printing, none/staple/spiral binding, persistence, invalid input handling and unit tests. Deadline checking: one FIFO station, daily 09:00–17:00 hours, sample print/binding speeds, stored start/finish times and confirmation-time rechecks. Excluded: actual document processing, payments, printers, tax, actual production monitoring and production authentication.
 
 Core target: 200–300 lines, excluding interfaces and tests.
